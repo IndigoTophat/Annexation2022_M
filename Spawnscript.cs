@@ -132,7 +132,7 @@ public class SpawnScript : MonoBehaviour
         return new Vector3(randomX, randomY, 0f);
     }
 
-    private bool IsPlayerInSpawnArea()
+    private bool IsPlayerInSpawnArea() //Same Script but with the original area, works perfectly fine
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(spawnAreaSize1.x, spawnAreaSize1.y), 0f);
 
@@ -147,7 +147,7 @@ public class SpawnScript : MonoBehaviour
         return false;
     }
 
-    private bool IsPlayerInSpawnArea2()
+    private bool IsPlayerInSpawnArea2() //This is where the player should be detected, but the player is not
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(spawnAreaSize2.x, spawnAreaSize2.y), 0f);
 
